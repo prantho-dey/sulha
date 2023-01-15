@@ -1,0 +1,37 @@
+
+.partner-area {
+    padding: 90px 0px 120px;
+}
+.partner-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 53px;
+}
+@media screen and (max-width: 1199px) {
+    .partner-wrapper {
+        gap: 30px;
+    }
+}
+@media screen and (max-width: 991px) {
+    .partner-area {
+        padding: 70px 0px;
+    }
+    .partner-wrapper {
+        gap: 20px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .partner-wrapper {
+        flex-wrap: wrap;
+        gap: 30px;
+        a {
+            width: calc(100% / 3 - 20px);
+        }
+    }
+}
+@media screen and (max-width: 575px) {
+    .partner-area {
+        padding: 60px 0px;
+    }
+}

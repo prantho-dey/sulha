@@ -1,0 +1,106 @@
+
+.banner-area {
+    background-color: #F4F8FB;
+    padding: 50px 0px 56px;
+}
+.banner-wrapper {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.banner-content {
+    max-width: 665px;
+    width: 100%;
+    margin-right: -115px;
+    margin-bottom: 30px;
+    h1 {
+        font-weight: 600;
+        font-size: 80px;
+        line-height: 1;
+        letter-spacing: -0.06em;
+        color: #003250;
+        margin-bottom: 40px;
+    }
+    p {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.6;
+        letter-spacing: -0.01em;
+        color: #586064;
+        max-width: 580px;
+        margin-bottom: 24px;
+    }
+    a {
+        display: inline-block;
+        background: $secondary-color;
+        border-radius: 8px;
+        color: $white;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        text-transform: uppercase;
+        padding: 12px 14px;
+        transition: all .3s ease-in-out;
+        &:hover {
+            background: $primary-color;
+            color: $white;
+        }
+    }
+}
+.banner-tumb {
+    max-width: 604px;
+    width: 100%;
+    margin-right: -30px;
+}
+
+// Responsive
+@media screen and (max-width: 1199px) {
+    .banner-content {
+        margin-right: 0px;
+        margin-bottom: 0px;
+    }
+    .banner-tumb {
+        margin-right: 0px;
+    }
+    .banner-content {
+        h1 {
+            font-size: 57px;
+        }
+    }
+}
+@media screen and (max-width: 991px) {
+    .banner-wrapper {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .banner-content {
+        text-align: center;
+        max-width: 100%;
+        h1 {
+            margin-bottom: 30px;
+        }
+        p {
+            max-width: 100%;
+        }
+    }
+    .banner-tumb {
+        max-width: 100%;
+    }
+}
+@media screen and (max-width: 575px) {
+    .banner-area {
+        padding: 40px 0px 50px;
+    }
+    .banner-content {
+        h1 {
+            font-size: 40px;
+            margin-bottom: 25px;
+        }
+        p {
+            font-size: 15px;
+        }
+        a {
+            display: block;
+        }
+    }
+}
