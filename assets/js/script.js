@@ -2,23 +2,6 @@
 
     'use strict';
 
-	/*------------------------------------
-        scrollUp
-	--------------------------------------*/
-	$(window).scroll(function () {
-		if ($(this).scrollTop() !== 0) {
-			$('#scrollUp').fadeIn();
-		} else {
-			$('#scrollUp').fadeOut();
-		}
-    });
-    
-	$('#scrollUp').on('click', function () {
-		$("html, body").animate({scrollTop: 0}, 600);
-		return false;
-	});
-
-
 	// Accordion
 	$('.faq-head').click(function() {
 		$(this).parent().addClass('active').children('.faq-body').slideDown().parent().siblings().removeClass('active').children('.faq-body').slideUp();
@@ -30,13 +13,14 @@
 		margin:30,
 		nav:false,
 		dots:true,
+		autoHeight: false,
 		responsive:{
 			0:{
 				items:1,
-				// autoHeight: true,
 			},
-			600:{
-				items:2
+			767:{
+				items:2,
+				autoHeight: true,
 			},
 			1000:{
 				items:3
@@ -62,5 +46,14 @@
 			}
 		}
 	})
+
+	// Read more
+	$('.invisible-content').hide();
+	$(document).on('click',"#read-button", function(){
+		var morelessbtn = $(".invisible-content").is(":visible")?'Read more':'Show less';
+		$(this).text(morelessbtn);
+		$(this).parent('.single-testimonial').find('.invisible-content').toggle();
+		$(this).parent('.single-testimonial').find('.visible-contnet').toggle();
+	});
 
 })(jQuery);
