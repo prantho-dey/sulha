@@ -9,7 +9,7 @@
 
 	// Owl 
 	$('.testimonial-wrapper').owlCarousel({
-		loop:true,
+		loop:false,
 		margin:30,
 		nav:false,
 		dots:true,
