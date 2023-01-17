@@ -55,5 +55,10 @@
 		$(this).parent('.single-testimonial').find('.invisible-content').toggle();
 		$(this).parent('.single-testimonial').find('.visible-contnet').toggle();
 	});
+	
+	// Team 
+	$('.collaps').click(function() {
+		$(this).toggleClass('active').parents('.single-team-member').children('.team-description').slideToggle();
+	})
 
 })(jQuery);

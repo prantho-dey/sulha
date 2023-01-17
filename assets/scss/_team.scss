@@ -28,6 +28,48 @@
     }
 }
 
+.team-member-detals {
+    position: relative;
+}
+
+.collaps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    span {
+        width: 14px;
+        height: 2px;
+        background-color: #000;
+        transition: all .3s ease-in-out;
+        &:last-child {
+            position: absolute;
+            transform: rotate(90deg);
+            height: 1.5px;
+        }
+    }
+    &.active {
+        span {
+            &:last-child {
+                opacity: 0;
+            }
+        }
+    }
+}
+.team-description {
+    color: #003250 !important;
+    margin-top: 20px !important;
+    display: none;
+}
 
 .single-team-member {
     h4 {
